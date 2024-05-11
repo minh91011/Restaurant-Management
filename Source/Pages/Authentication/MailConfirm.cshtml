@@ -1,0 +1,47 @@
+﻿@page
+@model RestaurantManagement.Pages.Authentication.MailComfirmModel
+@{
+}
+@{
+    Layout = "_MyLayout";
+}
+
+
+<body>
+    <div class="login-form">
+        <h3 class="menutext">Enter your Email</h3>
+        <form method="post">
+            <div class="form-group">
+                @* <label for="Email">Email:</label> *@
+                <input type="email" class="form-control" id="Email" name="Email" />
+            </div>
+            <h3 style="color:red">@Model.message</h3>
+            <button type="submit" class="btn">Send OTP</button>
+        </form>
+    </div>
+    <div class="row contact">
+        <div class="headercontact col-md-12 textfeedback d-flex justify-content-center text-danger">
+            <a></a>
+            <h2 class="me-5 ms-5">CONTACT</h2>
+            <a></a>
+        </div>
+        <div class="row contactinfo">
+            <div class="col-md-6 contacttext">
+                <p>FPT University Hoa Lac Campus, Thach That, Ha Noi</p>
+                <p>Email: info@restaurant.com</p>
+                <p>Phone: +1-123-456-7890</p>
+                <p>&copy; 2023 Restaurant Management</p>
+            </div>
+            <div class="col-md-6 contactimg">
+                <div>
+                    <a href="https://www.facebook.com"><img src="~/css/fb.png" alt="Logo"></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/css/google.png" alt="Logo"></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/css/twitter.png" alt="Logo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<link href="~/css/authentication/loginregister.css" rel="stylesheet" />
+
+

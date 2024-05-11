@@ -1,0 +1,51 @@
+﻿.body {
+    width: 100%;
+    /*border: 2px solid #fb2e00;*/
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.menu {
+    width: 100%;
+    font-family: Open Sans;
+    color: yellow;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.menutext {
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #fb2e00;
+    padding:10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 1px solid #fb2e00;
+    border-radius: 10px;
+    background-color: #fff6da;
+}
+
+.btncrud {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.btncrud a {
+    border: 2px solid #fb2e00;
+    background-color: #fb2e00;
+    text-decoration: none;
+    color: yellow;
+    border-radius: 4px;
+}
+
+.btncrud a:hover {
+    background-color: yellow;
+    color: #fb2e00;
+}

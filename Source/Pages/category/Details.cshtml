@@ -1,0 +1,36 @@
+﻿@page
+@model RestaurantManagement.Pages.category.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <div class="menu">
+        <div>
+            <h2 class="menutext">CATEGORY DETAILS</h2>
+        </div>
+    </div>
+    <div>
+        <table class="table">
+            <thead class="theadtable">
+                <tr>
+                    <th class="title">Name</th>
+                    <th class="title">Description</th>
+                    <th class="title">Settings</th>
+                </tr>
+            </thead>
+            <tr class="tbodyfood">
+                <td>@Html.DisplayFor(model => model.FoodCategory.Name)</td>
+
+                <td>@Html.DisplayFor(model => model.FoodCategory.Description)</td>
+                <td class="btncrud">
+                    <a asp-page="./Edit" asp-route-id="@Model.FoodCategory?.Id">Edit</a>
+                    <a asp-page="./Index">Back to List</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<link href="~/css/foodandcategory/details.css" rel="stylesheet" />
+<link href="~/css/buttoncustom.css" rel="stylesheet" />

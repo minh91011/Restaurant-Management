@@ -1,0 +1,60 @@
+﻿@page
+@model RestaurantManagement.Pages.Authentication.RegisterModel
+@{
+}
+@{
+    Layout = "_MyLayout";
+}
+
+<body class="container">
+    <div class="login-form">
+        <h2 class="menutext">Register</h2>
+        <form method="post">
+            <div class="form-group">
+                <label for="Username">Username:</label>
+                <input type="text" class="form-control" id="Username" name="Username" />
+            </div>
+            <div class="form-group">
+                <label for="Password">Password:</label>
+                <input type="password" class="form-control" id="Password" name="Password" />
+            </div>
+            <div class="form-group">
+                <label for="Fullname">Full Name:</label>
+                <input type="text" class="form-control" id="Fullname" name="Fullname" />
+            </div>
+            <div class="form-group">
+                <label for="Phone">Phone:</label>
+                <input type="text" class="form-control" id="Phone" name="Phone" />
+            </div>
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="email" class="form-control" id="Email"
+                       name="Email" value="@Model.email" readonly />
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+    <div class="row contact">
+        <div class="headercontact col-md-12 textfeedback d-flex justify-content-center text-danger">
+            <a></a>
+            <h2 class="me-5 ms-5">CONTACT</h2>
+            <a></a>
+        </div>
+        <div class="row contactinfo">
+            <div class="col-md-6 contacttext">
+                <p>FPT University Hoa Lac Campus, Thach That, Ha Noi</p>
+                <p>Email: info@restaurant.com</p>
+                <p>Phone: +1-123-456-7890</p>
+                <p>&copy; 2023 Restaurant Management</p>
+            </div>
+            <div class="col-md-6 contactimg">
+                <div>
+                    <a href="https://www.facebook.com"><img src="~/css/fb.png" alt="Logo"></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/css/google.png" alt="Logo"></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/css/twitter.png" alt="Logo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<link href="~/css/authentication/loginregister.css" rel="stylesheet" />

@@ -1,0 +1,44 @@
+﻿@page
+@model RestaurantManagement.Pages.FoodManager.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div>
+    <div class="menu">
+        <div>
+            <h2 class="menutext">DELETE FOOD</h2>
+        </div>
+    </div>  
+    <div>
+        <table class="table">
+            <thead class="theadtable">
+                <tr>
+                    <th class="title">Name</th>
+                    <th class="title">Description</th>
+                    <th class="title">Price</th>
+                    <th class="title">Category</th>
+                    <th class="title">Settings</th>
+                </tr>
+            </thead>
+            <tr class="tbodyfood">
+                <td>@Html.DisplayFor(model => model.Food.Name)</td>
+
+                <td>@Html.DisplayFor(model => model.Food.Description)</td>
+
+                <td>@Html.DisplayFor(model => model.Food.Price)</td>
+
+                <td>@Html.DisplayFor(model => model.Food.Category.Name)</td>
+                <td class="btncrud">
+                    <form method="post">
+                        <input type="hidden" asp-for="Food.Id" />
+                        <input type="submit" value="Delete" class="btndelete" />
+                        <a asp-page="./Index">Back to List</a>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<link href="~/css/foodandcategory/delete.css" rel="stylesheet" />

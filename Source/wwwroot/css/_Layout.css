@@ -1,0 +1,52 @@
+﻿.ulheader {
+    display: flex;
+    justify-content: center;
+}
+
+.btnheader img {
+    display: flex;
+    height: 50px;
+    padding-left: 10px;
+    /*    background-color:aqua;*/
+}
+
+.btnheader a {
+    font-size: 20px;
+    color: red;
+}
+
+    .btnheader a:hover {
+        font-weight: bold;
+        color: red;
+    }
+
+.btnheader {
+    /*margin:20px;*/
+}
+
+.btnlogoutdetails {
+    border: solid 2px red;
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.btndetails {
+    width: 200px;
+    /*    background-color: lightpink;*/
+    text-align: center;
+}
+
+    .btndetails img {
+        margin-left: 30%;
+    }
+
+.imgHeader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: 100%;
+    height: 400px;
+}

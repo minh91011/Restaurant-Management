@@ -1,0 +1,58 @@
+﻿@page
+@model RestaurantManagement.Pages.FoodManager.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div>
+    <div class="menu">
+        <div>
+            <h2 class="menutext">CREATE FOOD</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Food.Name" class="control-label"></label>
+                    <input asp-for="Food.Name" class="form-control" />
+                    <span asp-validation-for="Food.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Food.Description" class="control-label"></label>
+                    <input asp-for="Food.Description" class="form-control" />
+                    <span asp-validation-for="Food.Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Food.Price" class="control-label"></label>
+                    <input asp-for="Food.Price" class="form-control" />
+                    <span asp-validation-for="Food.Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Category Name</label>
+                    <select asp-for="Food.Category.Name" class="form-control" asp-items="ViewBag.Name"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Food.Image" class="control-label"></label>
+                    <input class="form-control-file" type="file" name="image" />
+                </div>
+                <div class="btncrud">
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-danger" />
+                    </div>
+                    <div>
+                        <button type="button" class="btn" onclick="location.href='@Url.Page("Index")'">Back to List</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<link href="~/css/foodandcategory/create.css" rel="stylesheet" />
+<link href="~/css/buttoncustom.css" rel="stylesheet" />

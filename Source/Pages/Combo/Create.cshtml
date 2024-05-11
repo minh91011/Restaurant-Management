@@ -1,0 +1,57 @@
+﻿@page
+@using RestaurantManagement.Models;
+@model RestaurantManagement.Pages.Combo.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div>
+    <div class="menu">
+        <div>
+            <h2 class="menutext">CREATE COMBO</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Combo.Name" class="control-label"></label>
+                    <input asp-for="Combo.Name" class="form-control" />
+                    <span asp-validation-for="Combo.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Combo.Description" class="control-label"></label>
+                    <input asp-for="Combo.Description" class="form-control" />
+                    <span asp-validation-for="Combo.Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Combo.FoodCombos" class="control-label"></label>
+                    <select name="FoodCombos" class="form-control" multiple>
+                        @foreach (Food food in Model.GetAllFoods())
+                        {
+                            <option value="@food.Id">@food.Name</option>
+                        }
+                    </select>
+                    <span class="text-information">Hold ctrl to select multiple food</span>
+                </div>
+                <div class="btncrud">
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-danger" />
+                    </div>
+                    <div>
+                        <button type="button" class="btn" onclick="location.href='@Url.Page("Index")'">Back to List</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<link href="~/css/foodandcategory/create.css" rel="stylesheet" />
+<link href="~/css/buttoncustom.css" rel="stylesheet" />

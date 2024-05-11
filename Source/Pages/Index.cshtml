@@ -1,0 +1,144 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RestaurantManagement</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RestaurantManagement.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="header">
+        <div class="imgHeader">
+            <img src="~/css/background.jpg" alt="Logo" class="logo-image">
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+            <div class="container headerWeb">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 ulheader">
+                        <li class="nav-item">
+                            <div class="btnheader">
+                                <a class="nav-link btndetails" asp-area="" asp-page="/authentication/login">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="btnheader">
+                                <a class="nav-link btndetails" asp-area="" asp-page="/authentication/register">Register</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mb-5 aboutus">
+        <div class="row">
+            <div class="col-md-6  aboutustext">
+                <h2 id="text" class="textbranch d-flex justify-content-center mb-3 text-danger">STORY ABOUT MY BRANCH</h2>
+                <p>
+                    Là hệ thống nhà hàng buffet lẩu tại Hà Nội, rất được khách hàng tin tưởng và đánh giá cao về chất lượng. Với giá buffet chỉ từ 139.000 đồng, khách hàng sẽ được thưởng thức tới gần 50 món ăn đa dạng từ ba chỉ bò Mỹ, hải sản tổng hợp, khai vị kích thích vị giác với salad rau Hàn Quốc, Gà chiên Hàn Quốc, Đảo sườn Thái Lan, Há cảo chiên,… cùng vô vàn những món ăn, thức uống hấp dẫn khác.
+                </p>
+                <p>
+                    Với sự ủng hộ, yêu thích của khách hàng, Buffet Lẩu đã không ngừng phát triển và có tới 10 cơ sở trên khắp địa bàn Hà Nội:
+                    <ul>
+                        <li>
+                            CS1: 134 Trần Đại Nghĩa, Hai Bà Trưng.
+                        </li>
+                        <li>
+                            CS3: Số 21 đường 19/5, Văn Quán, Hà Đông.
+                        </li>
+                        <li>
+                            CS6: 265 Tô Hiệu, Cầu Giấy.
+                        </li>
+                        <li>
+                            CS7: Số 51A Hồ Tùng Mậu, Cầu Giấy.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="~/css/hero.png" class="imgbranch" />
+            </div>
+        </div>
+    </div>
+    <div class="container feedback">
+        <div class="row">
+            <div class="headercontact col-md-12 textfeedback d-flex justify-content-center text-danger">
+                <a></a>
+                <h2 class="me-5 ms-5">FEED BACK</h2>
+                <a></a>
+            </div>
+            <div class="row fbrow d-flex justify-content-center">
+                <div class="col-md-4 fb">
+                    <p>
+                        Messi có dịp ghé Restaurant vào một dịp trời thu Hà Nội. Ăn một lần mà rất nhớ vị lẩu ở đây. Mọi người cứ đến ăn để trải nghiệm như Messi nhé.
+                    </p>
+                    <div class="imgfb">
+                        <img src="https://media.bongda.com.vn/files/hai.phan/2018/11/17/s1-1902.jpg" class="imgfb1" />
+                    </div>
+                </div>
+                <div class="col-md-4 fb">
+                    <p>
+                        Restaurant là nhà hàng mình thấy đặc biệt ngon và phù hợp với các bạn trẻ. Khám phá món mới cùng Ronaldo
+                    </p>
+                    <div class="imgfb">
+                        <img src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/9/13/953112/Ronaldo-Meal-1.jpg" class="imgfb1" />
+                    </div>
+                </div>
+                <div class="col-md-4 fb">
+                    <p>
+                        Neymar thực sự hài lòng về đồ ăn tại Restaurant. Nhiều bạn đến đây sẽ thích cho xem.Neymar đã ăn tại đây
+                    </p>
+                    <div class="imgfb">
+                        <img src="https://64.media.tumblr.com/81bf0d05bcf1945882c7c35e1dd6ba5a/tumblr_p5tpyspOG81tgrk4vo1_640.jpg" class="imgfb1" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row contact">
+        <div class="headercontact col-md-12 textfeedback d-flex justify-content-center text-danger">
+            <a></a>
+            <h2 class="me-5 ms-5">CONTACT</h2>
+            <a></a>
+        </div>
+        <div class="row contactinfo">
+            <div class="col-md-6 contacttext">
+                <p>FPT University Hoa Lac Campus, Thach That, Ha Noi</p>
+                <p>Email: info@restaurant.com</p>
+                <p>Phone: +1-123-456-7890</p>
+                <p>&copy; 2023 Restaurant Management</p>
+            </div>
+            <div class="col-md-6 contactimg">
+                <div>
+                    <a href="https://www.facebook.com"><img src="~/css/fb.png" alt="Logo"></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/css/google.png" alt="Logo"></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/css/twitter.png" alt="Logo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<link href="~/css/home.css" rel="stylesheet" />
+<script>
+    // Optional: If you want to stop the rotation on hover
+    var img = document.querySelector('.imgbranch');
+
+    img.addEventListener('mouseout', function () {
+        img.style.animationPlayState = 'running';
+    });
+</script>

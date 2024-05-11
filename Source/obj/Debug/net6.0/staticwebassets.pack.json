@@ -1,0 +1,341 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\RestaurantManagement.bundle.scp.css",
+      "PackagePath": "staticwebassets\\RestaurantManagement.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\Authentication\\LoginRegister.css",
+      "PackagePath": "staticwebassets\\css\\Authentication\\LoginRegister.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\FoodandCategory\\Create.css",
+      "PackagePath": "staticwebassets\\css\\FoodandCategory\\Create.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\FoodandCategory\\Delete.css",
+      "PackagePath": "staticwebassets\\css\\FoodandCategory\\Delete.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\FoodandCategory\\Details.css",
+      "PackagePath": "staticwebassets\\css\\FoodandCategory\\Details.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\FoodandCategory\\Edit.css",
+      "PackagePath": "staticwebassets\\css\\FoodandCategory\\Edit.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\FoodandCategory\\Index.css",
+      "PackagePath": "staticwebassets\\css\\FoodandCategory\\Index.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\Home.css",
+      "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\_Layout.css",
+      "PackagePath": "staticwebassets\\css\\_Layout.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\background.jpg",
+      "PackagePath": "staticwebassets\\css\\background.jpg"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\baoson.jpg",
+      "PackagePath": "staticwebassets\\css\\baoson.jpg"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\buttoncustom.css",
+      "PackagePath": "staticwebassets\\css\\buttoncustom.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\duongtu.jpg",
+      "PackagePath": "staticwebassets\\css\\duongtu.jpg"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\fb.png",
+      "PackagePath": "staticwebassets\\css\\fb.png"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\google.png",
+      "PackagePath": "staticwebassets\\css\\google.png"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\hero.png",
+      "PackagePath": "staticwebassets\\css\\hero.png"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\iconrestaurant.png",
+      "PackagePath": "staticwebassets\\css\\iconrestaurant.png"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\minh.jpg",
+      "PackagePath": "staticwebassets\\css\\minh.jpg"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\css\\twitter.png",
+      "PackagePath": "staticwebassets\\css\\twitter.png"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Semester 7\\PRN221\\project 13_11\\RestaurantManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.RestaurantManagement.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.RestaurantManagement.props",
+      "PackagePath": "build\\RestaurantManagement.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.RestaurantManagement.props",
+      "PackagePath": "buildMultiTargeting\\RestaurantManagement.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.RestaurantManagement.props",
+      "PackagePath": "buildTransitive\\RestaurantManagement.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

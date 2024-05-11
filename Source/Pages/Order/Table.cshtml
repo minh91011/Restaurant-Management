@@ -1,0 +1,293 @@
+﻿@page
+@model RestaurantManagement.Pages.Order.TableModel
+@{
+}
+@{
+    Layout = "_MyLayout";
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    form {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="datetime-local"] {
+        margin: 10px 0;
+    }
+
+    input[type="submit"] {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    /* Style for container div */
+div {
+    margin-bottom: 10px;
+}
+
+/* Style for radio buttons and labels */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Style for date-time inputs */
+input[type="datetime-local"] {
+    margin-bottom: 5px;
+}
+
+/* Style for error message */
+h4 {
+    font-size: 16px;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Loading animation styling (you can customize this based on your needs) */
+.loading {
+    display: none;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 10px;
+} 
+/* Keyframe animation for loading spinner */
+ /* Style for the form container */
+ 
+
+/* Style for the label */
+ 
+
+/* Style for datetime input */
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Style the table */
+table {
+    align-content:center;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Style table headers */
+th {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style alternating rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Style radio button labels */
+label {
+    cursor: pointer;
+}
+
+/* Add some spacing between radio button and label */
+input[type="radio"] {
+    margin-right: 5px;
+}
+reservationlist{
+    display:flex; 
+    flex-wrap:wrap;
+}
+</style>
+
+  <script>
+    function validateDate() {
+      var inputDate = new Date(document.getElementById("datetime").value);
+      var currentDate = new Date();
+
+      // Set the current date time to the end of today (23:59:59)
+      currentDate.setHours(23, 59, 59, 999);
+
+      if (inputDate <= currentDate && inputDate >= new Date()) {
+        return true; // Date is valid
+      } else {
+        alert("Please select a date and time from now to the end of today.");
+        return false; // Prevent form submission
+      }
+
+
+       var inputDate = new Date(document.getElementById("datetime1").value);
+      var currentDate = new Date();
+
+      // Set the current date time to the end of today (23:59:59)
+      currentDate.setHours(23, 59, 59, 999);
+
+      if (inputDate <= currentDate && inputDate >= new Date()) {
+        return true; // Date is valid
+      } else {
+        alert("Please select a date and time from now to the end of today.");
+        return false; // Prevent form submission
+      }
+    }
+  </script>
+<form method="post" onsubmit="return validateDate()">
+    <h1 class="text-center text-danger">Đặt bàn</h1>
+    <table>
+    <thead>
+        <tr>
+            <th>Mô tả</th>
+            <th>Vị trí</th>
+            <th>Số bàn</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model.tableOrders)
+        {
+            <tr>
+                <td>
+                    <input required type="radio" name="table_id" value="@c.Id" id="table-@c.Id">
+                    <label for="table-@c.Id">@c.Description</label>
+                </td>
+                <td>Tầng @c.Floor</td>
+                <td>@c.Number</td>
+            </tr>
+        }
+    </tbody>
+</table>
+    <div style="margin-top:20px">
+    <label for="datetime1">Start</label>
+    <input required type="datetime-local" id="datetime1" name="start">
+
+    <label for="datetime">End</label>
+    <input required type="datetime-local" id="datetime" name="end">
+</div>
+
+    <h4 style="color:red">@Model.message</h4>
+    <input  onclick="loadingss()" type="submit" value="Đặt bàn" class="bg-danger">
+
+
+        <h3 class="text-danger text-center mt-5">Danh sách bàn và thời gian đã có người đặt</h3>
+         <div id="reservation-list" class="row d-flex justify-content-center align-items-center">          
+                @foreach(var tb in Model.tableOrderCustomers){
+                    <div style="background-color: #fff6da;
+                        margin: 5px;
+                        padding: 18px;
+                        border-radius: 14px;" class="col-md-5">
+                        <p>@tb.TableOrder.Description, Tầng: @tb.TableOrder.Floor, Số bàn: @tb.TableOrder.Number</p>
+                    <p>Start: @tb.Start</p
+                    <p>End: @tb.End</p>
+                    </div>
+                 }
+        </div>
+</form>
+<div class="row contact mt-5">
+        <div class="headercontact col-md-12 textfeedback d-flex justify-content-center text-danger">
+            <a></a>
+            <h2 class="me-5 ms-5">CONTACT</h2>
+            <a></a>
+        </div>
+        <div class="row contactinfo">
+            <div class="col-md-6 contacttext">
+                <p>FPT University Hoa Lac Campus, Thach That, Ha Noi</p>
+                <p>Email: info@restaurant.com</p>
+                <p>Phone: +1-123-456-7890</p>
+                <p>&copy; 2023 Restaurant Management</p>
+            </div>
+            <div class="col-md-6 contactimg">
+                <div>
+                    <a href="https://www.facebook.com"><img src="~/css/fb.png" alt="Logo"></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/css/google.png" alt="Logo"></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/css/twitter.png" alt="Logo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+<script>
+
+
+    var connection = new signalR.HubConnectionBuilder().withUrl("/resHub").build();
+    connection.start();
+  
+    connection.on("LoadTableBooked", function (data) {
+     if (data == "loading") {
+       const myTimeout = setTimeout(myGreeting, 2000);
+
+        function myGreeting() {
+            window.location.reload();
+         }
+
+    }
+});
+</script>
+<link href="~/css/authentication/loginregister.css" rel="stylesheet" />
+
+ 
+  

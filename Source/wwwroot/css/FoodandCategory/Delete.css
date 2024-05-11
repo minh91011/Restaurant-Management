@@ -1,0 +1,55 @@
+﻿.menu {
+    width: 100%;
+    font-family: Open Sans;
+    color: #fb2e00;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.menutext {
+    font-size: 30px;
+}
+
+.table {
+    background-color: #ffe8a4;
+    width: 70%;
+    margin-left: 200px;
+}
+
+.theadtable {
+    background-color: #fb2e00;
+    text-align: center;
+}
+
+.title {
+    color: yellow;
+}
+
+.tbodyfood {
+    text-align: center;
+}
+
+.btncrud a {
+    border: 2px solid #fb2e00;
+    background-color: #fb2e00;
+    text-decoration: none;
+    color: yellow;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.btncrud a:hover {
+    background-color: yellow;
+    color: #fb2e00;
+}
+.btndelete {
+    border: 2px solid #fb2e00;
+    background-color: #fb2e00;
+    color: yellow;
+    padding: 3px;
+    border-radius: 4px;
+}
+.btndelete:hover {
+    background-color: yellow;
+    color: #fb2e00;
+}

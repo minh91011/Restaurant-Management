@@ -1,0 +1,98 @@
+﻿@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor;
+@{
+	string? isAuthen = null;
+	if (HttpContextAccessor.HttpContext != null)
+	{
+		isAuthen = HttpContextAccessor.HttpContext.Session.GetString("IsAuthenticated");
+	}
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - RestaurantManagement</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/RestaurantManagement.styles.css" asp-append-version="true" />
+
+</head>
+<body>
+	<header class="">
+		<nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+			<div class="container headerWeb">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+					<ul class="navbar-nav flex-grow-1 ulheader">
+						<li class="nav-item">
+							<div class="btnheader">
+								<a class="nav-link btndetails" asp-area="" asp-page="/Index"><img class="imghome" src="https://img.icons8.com/?size=256&id=12229&format=png" />Back Home</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<div class="btnheader">
+								<a class="nav-link btndetails" asp-area="" asp-page="/order/table"><img src="https://cdn-icons-png.flaticon.com/512/2534/2534679.png" />Booking</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<div class="btnheader">
+								<a class="nav-link btndetails" asp-area="" asp-page="/order/listorderdetail"><img src="https://img.icons8.com/?size=256&id=jhg1LegVnvVh&format=png" />My Booking</a>
+							</div>
+						</li>
+						@if (isAuthen == null)
+						{
+							<li class="nav-item">
+								<div class="btnheader">
+									<a class="nav-link btndetails" asp-area="" asp-page="/authentication/login"><img src="https://cdn-icons-png.flaticon.com/512/8109/8109306.png" />Login</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<div class="btnheader">
+									<a class="nav-link btndetails" asp-area="" asp-page="/authentication/register"><img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" />Register</a>
+								</div>
+							</li>
+						}
+						else
+						{
+							<li class="nav-item">
+								<div class="btnheader">
+									<a class="nav-link btndetails" asp-area="" asp-page="/authentication/logout"><img src="https://cdn-icons-png.flaticon.com/512/6568/6568636.png" />Logout</a>
+								</div>
+							</li>
+
+						}
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+		@*     <header> *@
+		@*         <h1>Welcome to Restaurant </h1>
+		<div class="header-buttons">
+		<a href="/order/table">Booking</a>
+		<a href="/order/listorderdetail">My Booking</a>
+		<a href="/authentication/login">Login</a>
+		<a href="/authentication/mailconfirm">Register</a>
+		<a href="/authentication/logout">Logout</a>
+		</div> *@
+	</header>
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+<link href="~/css/_Layout.css" rel="stylesheet" />

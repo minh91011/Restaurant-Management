@@ -1,0 +1,56 @@
+﻿@page
+@model RestaurantManagement.Pages.category.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="body">
+    <div class="menu">
+        <div>
+            <h2 class="menutext">MENU</h2>
+        </div>
+    </div>
+    <table class="table">
+        <thead class="theadtable">
+            <tr>
+                <th class="title">
+                    @Html.DisplayNameFor(model => model.FoodCategory[0].Name)
+                </th>
+                <th class="title">
+                    @Html.DisplayNameFor(model => model.FoodCategory[0].Description)
+                </th>
+                <th class="title">
+                    Settings
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbodyfood">
+            @foreach (var item in Model.FoodCategory)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td class="btncrud">
+                        <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> 
+                        <a asp-page="./Details" asp-route-id="@item.Id">Details</a> 
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>
+        <button type="button" class="btn" onclick="location.href='@Url.Page("Create")'">Create New Category</button>
+    </p>
+</div>
+@if (TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["AlertMessage"]</div>
+}
+<link href="~/css/foodandcategory/index.css" rel="stylesheet" />
+<link href="~/css/buttoncustom.css" rel="stylesheet" />

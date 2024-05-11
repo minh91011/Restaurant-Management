@@ -1,0 +1,144 @@
+﻿@page
+@using RestaurantManagement.Models;
+@model RestaurantManagement.Pages.Combo.EditModel
+@using RestaurantManagement.Models;
+
+@{
+	ViewData["Title"] = "Edit";
+	List<Food> allFoods = Model.GetAllFoods();
+}
+
+<<<<<<< HEAD
+<div>
+    <div class="menu">
+        <div>
+            <h2 class="menutext">EDIT COMBO</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Combo.Id" />
+                <div class="form-group">
+                    <label asp-for="Combo.Name" class="control-label"></label>
+                    <input asp-for="Combo.Name" class="form-control" />
+                    <span asp-validation-for="Combo.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Combo.Description" class="control-label"></label>
+                    <input asp-for="Combo.Description" class="form-control" />
+                    <span asp-validation-for="Combo.Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Combo.Price" class="control-label"></label>
+                    <input asp-for="Combo.Price" class="form-control" />
+                    <span asp-validation-for="Combo.Price" class="text-danger"></span>
+                </div>
+                <div class="btncrud">
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn" />
+                    </div>
+                    <div>
+                        <button type="button" class="btn" onclick="location.href='@Url.Page("Index")'">Back to List</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+=======
+<h1>Edit</h1>
+
+<h4>Combo</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<input type="hidden" asp-for="Combo.Id" />
+			<div class="form-group">
+				<label asp-for="Combo.Name" class="control-label"></label>
+				<input asp-for="Combo.Name" class="form-control" />
+				<span asp-validation-for="Combo.Name" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Combo.Description" class="control-label"></label>
+				<input asp-for="Combo.Description" class="form-control" />
+				<span asp-validation-for="Combo.Description" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Combo.FoodCombos" class="control-label"></label>
+				<select name="FoodCombos" class="form-control" multiple>
+					@foreach (Food food in allFoods)
+					{
+						if (Model.Food.Contains(food))
+						{
+							<option value="@food.Id" selected>@food.Name</option>
+						}
+						else
+						{
+							<option value="@food.Id">@food.Name</option>
+						}
+					}
+				</select>
+				<span class="text-information">Hold ctrl to select multiple food</span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Save" class="btn btn-primary" />
+			</div>
+		</form>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						@Html.DisplayNameFor(model => model.Food[0].Name)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.Food[0].Description)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.Food[0].Price)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.Food[0].Category)
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model.Food)
+				{
+					<tr>
+						<td>
+							@Html.DisplayFor(modelItem => item.Name)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Description)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Price)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.CategoryId)
+						</td>
+					</tr>
+				}
+
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div>
+	<a asp-page="./Index">Back to List</a>
+</div>
+>>>>>>> abf60c392fb7fafa216cbf1dcb551614f3a40b2c
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
+<link href="~/css/foodandcategory/edit.css" rel="stylesheet" />
+<link href="~/css/buttoncustom.css" rel="stylesheet" />

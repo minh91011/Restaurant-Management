@@ -1,0 +1,65 @@
+﻿@page
+@model RestaurantManagement.Pages.TableOrder.ListTableOrderModel
+@{
+}
+
+<div>
+    <div class="menu">
+        <div>
+            <h2 class="menutext">MENU</h2>
+        </div>
+    </div>
+    <table class="table" id="tableOrders">
+        <thead class="theadtable">
+            <tr>
+                <th class="title">Description</th>
+                <th class="title">Floor</th>
+                <th class="title">Number</th>
+                <th class="title">Settings</th>
+            </tr>
+        </thead>
+        <tbody class="tbodyfood">
+            @foreach (var item in Model.tableOrders)
+            {
+                <tr>
+                    <td> @item.Description</td>
+                    <td>@item.Floor</td>
+                    <td>@item.Number</td>
+@*                     <td>
+                        <a href="#" asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a href="#" asp-page="Update" asp-route-id="@item.Id">Update</a>
+                    </td> *@
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+
+<p>
+    <button type="button" class="btn" onclick="location.href='@Url.Page("Index")'">Create New Table</button>
+</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+<script>
+    var connection = new signalR.HubConnectionBuilder().withUrl("/resHub").build();
+    connection.start();
+    function deleteR(id){
+        connection.invoke("DeleteTableOrder",id);
+    }
+    connection.on("LoadTableOrder", (data) => {
+        // Clear the table body
+        const tableBody = document.querySelector("#tableOrders tbody");
+        tableBody.innerHTML = '';
+        console.log(data)
+        // Loop through the data and add rows to the table
+        data.forEach(item => {
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${item.description}</td><td>${item.floor}
+                </td><td>${item.number}</td>
+                <td><button onclick="deleteR(${item.id})">Delete</button></td>`;
+            tableBody.appendChild(row);
+        });
+    });           
+</script>
+<link href="~/css/foodandcategory/index.css" rel="stylesheet" />
+<link href="~/css/buttoncustom.css" rel="stylesheet" />

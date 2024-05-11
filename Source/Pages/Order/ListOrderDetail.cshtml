@@ -1,0 +1,174 @@
+﻿@page
+@model RestaurantManagement.Pages.Order.ListOrderDetailModel
+@{
+    Layout = "_MyLayout";
+}
+@{
+    int grandTotal = 0; // Initialize grand total outside the foreach loop
+}
+<style>
+    .order-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .food-combo-cell {
+        display: flex;
+        align-items: center;
+    }
+
+    .food-name, .combo-name {
+        margin: 0;
+    }
+
+/*         .food-name::before {
+            content: "Món: ";
+            font-weight: bold;
+        }
+
+        .combo-name::before {
+            content: "Combo Món: ";
+            font-weight: bold;
+        } */
+</style>
+<div style="background-color:whitesmoke">
+    <table class="order-table">
+        <thead>
+            <tr>
+                <th>Start</th>
+                <th>End</th>
+                <th>Floor</th>
+                <th>Number</th>
+                <th>Food/Combo Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model.tableOrderCustomers)
+            {
+                @if (customer.FoodTables.Count() != 0)
+                {
+                    <tr>
+                        <td>@customer.Start</td>
+                        <td>@customer.End</td>
+                        @foreach (var order in Model.tableOrders)
+                        {
+                            if (order.Id == customer.TableOrderId)
+                            {
+                                <td>@order.Floor</td>
+                                <td>@order.Number</td>
+                                break;
+                            }
+                        }
+                        <td>
+                            @foreach (var foodTable in customer.FoodTables)
+                            {
+                                if (customer.Id == foodTable.TableOrderCustomerId)
+                                {
+                                    @if (foodTable.FoodId != null)
+                                    {
+                                        @foreach (var food in Model.foods)
+                                        {
+                                            if (food.Id == foodTable.FoodId)
+                                            {
+                                                <p class="food-name">@food.Name</p>
+                                            }
+                                        }
+                                    }
+
+                                    @if (foodTable.ComboId != 0)
+                                    {
+                                        @foreach (var combo in Model.combos)
+                                        {
+                                            if (combo.Id == foodTable.ComboId)
+                                            {
+                                                <p class="combo-name">@combo.Name</p>
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        </td>
+                        <td>
+                            @foreach (var foodTable in customer.FoodTables)
+                            {
+                                if (customer.Id == foodTable.TableOrderCustomerId)
+                                {
+                                    <div>@foodTable.Number</div>
+                                }
+                            }
+                        </td>
+                        <td>
+                            @foreach (var foodTable in customer.FoodTables)
+                            {
+                                if (customer.Id == foodTable.TableOrderCustomerId)
+                                {
+                                    @if (foodTable.FoodId != null)
+                                    {
+                                        @foreach (var food in Model.foods)
+                                        {
+                                            if (food.Id == foodTable.FoodId)
+                                            {
+                                                <div>@food.Price</div>
+                                            }
+                                        }
+                                    }
+
+                                    @if (foodTable.ComboId != 0)
+                                    {
+                                        @foreach (var combo in Model.combos)
+                                        {
+                                            if (combo.Id == foodTable.ComboId)
+                                            {
+                                                <div for="combo-@combo.Id">@string.Format("{0:N0}", combo.Price) VNĐ</div>
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+<div class="row contact" style="margin-top:30%">
+    <div class="headercontact col-md-12 textfeedback d-flex justify-content-center text-danger">
+        <a></a>
+        <h2 class="me-5 ms-5">CONTACT</h2>
+        <a></a>
+    </div>
+    <div class="row contactinfo">
+        <div class="col-md-6 contacttext">
+            <p>FPT University Hoa Lac Campus, Thach That, Ha Noi</p>
+            <p>Email: info@restaurant.com</p>
+            <p>Phone: +1-123-456-7890</p>
+            <p>&copy; 2023 Restaurant Management</p>
+        </div>
+        <div class="col-md-6 contactimg">
+            <div>
+                <a href="https://www.facebook.com"><img src="~/css/fb.png" alt="Logo"></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/css/google.png" alt="Logo"></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/css/twitter.png" alt="Logo"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<link href="~/css/authentication/loginregister.css" rel="stylesheet" />

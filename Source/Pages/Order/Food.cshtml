@@ -1,0 +1,267 @@
+﻿@page
+@model RestaurantManagement.Pages.Order.IndexModel
+@{
+}
+@{
+    Layout = "_MyLayout";
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    form {
+        max-width: 1800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+    table {
+        width: 45%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    input[type="checkbox"],
+    input[type="number"] {
+        margin-right: 5px;
+    }
+
+    .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+</style>
+
+<form method="post">
+    <div style="display: flex; justify-content: space-between">
+        <table style="width:50%">
+            <thead>
+                <tr>
+                    <th>Danh mục</th>
+                    <th>Món ăn</th>
+                    <th style="width:140px">Ảnh món ăn</th>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model.foodCategories)
+                {
+                    @if (c.Foods.Count() != 0)
+                    {
+                        <tr style="background-color: #fff6da;">
+                            <td colspan="1"><h3 class="text-center">@c.Name</h3></td>
+                        </tr>
+                    }
+
+                    @foreach (var f in c.Foods)
+                    {
+                        if (@c.Id == f.CategoryId)
+                        {
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="checkbox" id="food-@f.Id" name="foodId[]" value="@f.Id">
+                                    <label for="food-@f.Id">@f.Name</label>
+                                </td>
+                                <td><img class="food-image" style="height:120px;width:100%" src="@f.Image" /></td>
+                                <td style="width:100px">
+                                    <input style="width:100%" type="number" name="number_combo[]">
+                                </td>
+                                <td>
+                                    <label for="food-@f.Id">@string.Format("{0:N0}", f.Price) VNĐ</label>
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+            </tbody>
+        </table>
+
+        <table style="width:48%; height:fit-content">
+            <thead>
+                <tr>
+                    <th style="width:200px">Combo (tiết kiệm 10%)</th>
+                    <th>Số lượng</th>
+                    <th>Món ăn</th>
+                    <th>Đơn giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var com in Model.combo)
+                {
+                    @if (com.FoodCombos.Count() != 0)
+                    {
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="combo-@com.Id" name="comboId[]" value="@com.Id">
+                                <label for="combo-@com.Id">@com.Name</label>
+                            </td>
+                            <td style="width:100px">
+                                <input style="width:100%" type="number" name="number_combo[]">
+                            </td>
+                            <td>
+                                <ul>
+                                    @{
+                                        int orderNumber = 1;
+                                        foreach (var fb in Model.foodcombo.Where(fc => fc.ComboId == com.Id).OrderBy(fc => fc.Food.Name))
+                                        {
+                                            <li>@orderNumber. @fb.Food.Name</li>
+                                            orderNumber++;
+                                        }
+                                    }
+                                </ul>
+                            </td>
+
+                            <td>
+                                <label for="combo-@com.Id">@string.Format("{0:N0}", com.Price) VNĐ</label>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+    </div>
+    <input style="margin-top:30px;" type="submit" value="Booking" class="bg-danger">
+</form>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script>
+    // Get all the checkboxes and corresponding quantity input fields
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const quantityInputs = document.querySelectorAll('input[type="number"]');
+
+    // Function to update input field state
+    function updateInputState(index) {
+        if (checkboxes[index].checked) {
+            quantityInputs[index].disabled = false;
+        } else {
+            quantityInputs[index].disabled = true;
+        }
+    }
+
+    // Loop through the checkboxes and initialize the input states
+    checkboxes.forEach((checkbox, index) => {
+        updateInputState(index);
+
+        // Add an event listener to each checkbox
+        checkbox.addEventListener('change', function () {
+            updateInputState(index);
+        });
+    });
+</script>
+<script>
+    // Function to handle image click and zoom
+    function zoomImage(imageSrc) {
+        // Create a modal for the zoomed image
+        var modal = document.createElement('div');
+        modal.classList.add('modal');
+
+        // Create an image element for the zoomed image
+        var zoomedImg = document.createElement('img');
+        zoomedImg.src = imageSrc;
+
+        // Append the zoomed image to the modal
+        modal.appendChild(zoomedImg);
+
+        // Append the modal to the body
+        document.body.appendChild(modal);
+
+        // Close the modal when clicking outside the image
+        modal.addEventListener('click', function () {
+            modal.remove();
+        });
+    }
+
+    // Attach click event listeners to all food images
+    document.addEventListener('DOMContentLoaded', function () {
+        var foodImages = document.querySelectorAll('.food-image');
+        foodImages.forEach(function (image) {
+            image.addEventListener('click', function () {
+                var imageSrc = this.src;
+                zoomImage(imageSrc);
+            });
+        });
+    });
+</script>
